@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <ImageView
+        android:id="@+id/theChanceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/chance"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/textId"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="@id/theChanceImage"
+        app:layout_constraintTop_toBottomOf="@id/theChanceImage"
+        android:textColor="@color/white"
+        android:text="my video title"
+        android:background="@color/green"/>
+    <ImageView
+        android:id="@+id/playId"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        app:layout_constraintStart_toStartOf="@id/theChanceImage"
+        app:layout_constraintTop_toTopOf="@id/theChanceImage"
+        app:layout_constraintEnd_toEndOf="@id/theChanceImage"
+        app:layout_constraintBottom_toBottomOf="@id/theChanceImage"/>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

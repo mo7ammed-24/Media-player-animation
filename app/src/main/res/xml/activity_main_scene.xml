@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/theChanceImage"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/textId"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="@id/theChanceImage"
+            app:layout_constraintTop_toBottomOf="@id/theChanceImage"/>
+        <Constraint
+            android:id="@+id/playId"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="@id/theChanceImage"
+            app:layout_constraintTop_toTopOf="@id/theChanceImage"
+            app:layout_constraintEnd_toEndOf="@id/theChanceImage"
+            app:layout_constraintBottom_toBottomOf="@id/theChanceImage"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/theChanceImage"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+            android:id="@+id/textId"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toEndOf="@id/theChanceImage"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+            android:id="@+id/playId"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="@id/textId"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="60dp"/>
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" >
+        <OnSwipe
+            app:touchAnchorId="@+id/theChanceImage"
+            app:dragDirection="dragUp"/>
+    </Transition>
+</MotionScene>
